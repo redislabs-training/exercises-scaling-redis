@@ -6,16 +6,17 @@
 - docker-compose
 - internet connection
 
-## Start Environment
+## Starting Environment
 
 ```
 docker-compose up -d
 ```
 
-## Connect to Environment
+## Stopping Environment
+
+After completing the exercises
 
 ```
-docker-compose exec redis_tls bash
+docker-compose down
 ```
 
-## Complete the exercise

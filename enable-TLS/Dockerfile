@@ -1,4 +1,4 @@
-FROM redis:latest
+FROM redis:6.2
 
 RUN apt update && apt-get install -y openssl wget
 

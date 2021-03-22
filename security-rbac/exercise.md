@@ -1,7 +1,7 @@
 # Exercise: RBAC in Redis Enterprise
 
 
-## Set Up
+## Setup
 After the docker-compose -d command has successfully started up the Redis Enterprise docker container we will need to bootstrap Redis Enterprise.  This involved creating a single node cluster.  Note that in Redis Enterprise a cluster node equates to an instance resourece on which Redis Enterprise is installed and not just where a Redis server process is running.
 
 There is a setup.sh script provided which will get things started so you can focus on the RBAC exercises.

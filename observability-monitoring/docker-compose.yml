@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  redis_enterprise_monitoring:
+    image: redislabs/redis:latest
+    tty: true
+    cap_add: 
+      - sys_resource
+    ports:
+      - "8443:8443"
+      - "12000:12000"

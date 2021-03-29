@@ -71,6 +71,47 @@ Notice at the top there is a rectangular blue switch box with 'Database' selecte
 
 In our case there won't be much difference in the actual numbers because we are currently running a single shard, but this can be very useful to identify hot shards and get other insights into the database health.
 
+## Prometheus Exporter
+
+You can what data is available on the Prometheus exporter endpoint by calling it on port 8070:
+
+```
+docker-compose exec redis_enterprise_monitoring curl -k https://localhost:8070/metrics
+```
+
+## REST API
+
+The Redis Enterprise REST API also has a way to pull stats directly.  You can try pulling stats for the databases:
+
+```
+docker-compose exec redis_enterprise_monitoring curl -k -u learn@redislabs.com:redis123 https://localhost:9443/v1/bdbs/stats
+```
+
+You can explore the following query params:
+
+* `interval` – Optional time interval for for which we want stats: 1sec/10sec/5min/15min/1hour/12hour/1week
+* `stime` – Optional start time from which we want the stats. Should comply with the ISO_8601 format
+* `etime` –
+Optional end time after which we don’t want the stats. Should comply with the ISO_8601 format
+
+Add an interval query param to set the interval time to five minutes.
+
+Stats can be pulled from different endpoints as well:
+
+* `/v1/bdbs/stats` - databases
+* `/v1/nodes/stats` - nodes stats
+* `/v1/cluster/stats` - cluster
+
+Try each of these endpoints.
+
+Also, the id of a specific entity can be passed, for example if we wanted to just get the stats of our database with the id=1 and not the full array of nodes we could run:
+
+```
+docker-compose exec redis_enterprise_monitoring curl -k -u learn@redislabs.com:redis123 https://localhost:9443/v1/nodes/bdbs/1
+```
+
+Now do the same thing for the nodes endpoint and just get the stats for node=1.
+
 ## Stop Load Generation
 
 You can just use ctl-c in the terminal window where memtier_benchmark is running to to exit.

@@ -114,20 +114,20 @@ Return to the browser window you left before.  The session has likely timed out 
 
 You should now have a screen to enter the database details. Let's keep it simple to start with by entering a name and checking the 'Replication' box then click the 'Activate' button.  Redis Enterprise will create a single sharded database with replication using it's state machine to stand up necessary resources and connect them together.
 
-That's it, you just created a database with local high availability!
+That's it, you just created a database with high availability!
 
 ## Replication details
 
-Return to the terminal and run `rladmin status` again and you should see additinal sections containing data about your database.  Each database has an endpoint and shards associated with it.  If you look at the `SHARDS` section in detail you should see two shards one acting as a primary and the other a secondary replica.
+Return to the terminal and run `rladmin status` again and you should see additional sections containing data about your database.  Each database has an endpoint and shards associated with it.  If you look at the `SHARDS` section in detail you should see two shards one acting as a primary and the other a secondary replica.
 
 What nodes are the shards on?
 
 
 ## Create another database
 
-Go back to the browser administration UI and click on 'databases' in the nav menu.  You should see the database you created.  Redis Enterprise supports multi-tenancy: meaning you can create additional databses and will be allocated resources and managed independently.
+Go back to the browser administration UI and click on 'databases' in the nav menu.  You should see the database you created.  Redis Enterprise supports multi-tenancy: meaning you can create additional databases and will be allocated resources and managed independently.
 
-Click on the '+' icon under your database name and create another database with replication (the trial lincense allows for four shards so you should have enough).
+Click on the '+' icon under your database name and create another database with replication (the trial license allows for four shards so you should have enough).
 
 Now return to the terminal and run `rladmin> status` again.  You should now see two databases with unique IDs, two endpoints and four shards total.
 

@@ -18,7 +18,7 @@ https://localhost:8443/
 
 Redis Enterprise creates self-signed certs in the beginning so a secure connection is always created.  Since they are not CA signed certificates you will need to allow your browser to accept them.
 
-In the Firefox browser this consists of just clicking through the Advanced button and find the button to accept and continue.  If you are using a Chrome browser you can bypass this warning by just typing 'thisisunsafe' and it will automatically continue through to the site.
+Depending on your browser and version you may have an 'advanced' option that allows to accept and continue/proceed.  Some Chrome browser versions will not have this option, but you can bypass this warning by just typing 'thisisunsafe' and it will automatically continue through to the site.
 
 Once you bypass the browser warning you should see a login screen where you can use the following credentials to login:
 

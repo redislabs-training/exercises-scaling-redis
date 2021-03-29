@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 printf '\nCheck for Redis Enterprise to be ready: '
-until $(docker-compose exec redis_enterprise_monitoring sh -c "curl --output /dev/null --silent --head --fail -k https://localhost:9443/v1/bootstrap"); do
+until $(docker exec -it redis_enterprise_monitoring sh -c "curl --output /dev/null --silent --head --fail -k https://localhost:9443/v1/bootstrap"); do
     printf '.'
     sleep 3
 done

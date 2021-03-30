@@ -77,4 +77,6 @@ NOTE: With the limited resources of this dockerized environment there may be per
 
 You can use `ctl-c` in the terminal to stop the traffic.
 
+Exit out of the container shell by entering `exit` back to your own system's terminal.
+
 

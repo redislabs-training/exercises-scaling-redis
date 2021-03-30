@@ -1,0 +1,59 @@
+version: "3"
+
+services:
+  #Node 1
+  re1:
+    image: redislabs/redis:6.0.12-58
+    container_name: re1
+    restart: unless-stopped
+    tty: true
+    cap_add: 
+      - sys_resource
+    ports:
+      - "18443:8443"
+    volumes:
+      - ./:/home
+    networks:
+      re_cluster:
+        ipv4_address: 172.22.0.11
+
+  #Node 2
+  re2:
+    image: redislabs/redis:6.0.12-58
+    container_name: re2
+    restart: unless-stopped
+    tty: true
+    cap_add: 
+      - sys_resource
+    ports:
+      - "28443:8443"
+    volumes:
+      - ./:/home
+    networks:
+      re_cluster:
+        ipv4_address: 172.22.0.12
+
+  #Node 3
+  re3:
+    image: redislabs/redis:6.0.12-58
+    container_name: re3
+    restart: unless-stopped
+    tty: true
+    cap_add: 
+      - sys_resource
+    ports:
+      - "38443:8443"
+    volumes:
+      - ./:/home
+    networks:
+      re_cluster:
+        ipv4_address: 172.22.0.13
+
+#Docker Networks
+networks:
+  re_cluster:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.22.0.0/16

@@ -69,9 +69,9 @@ Go back to the configuration view and click 'Edit' at the bottom to edit the dat
 
 Open the 'metrics' view again.
 
-Is your database still taking client requests?  
+Open the 'metrics' view again, your database should still be taking client requests.
 
-With the limited resources of this dockerized environment there may be performance bumps.  This exercise is not intended to show an increase in performance just the ease of managing the scaling process.
+NOTE: With the limited resources of this dockerized environment there may be performance bumps.  This exercise is not intended to show an increase in performance just the ease of managing the scaling process.
 
 ## Stop traffic
 

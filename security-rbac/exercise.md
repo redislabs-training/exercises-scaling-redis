@@ -16,18 +16,18 @@ Once that completes you should be able to load Redis Enterprise admin UI in a br
 
 https://localhost:8443/
 
-Redis Enterprise creates self-signed certs in the beginning so a secure connection is always created.  Since they are not CA signed certificates you will need to allow your browser to accept them.
+Redis Enterprise creates self-signed certs at installation time so that a secure connection is always created. Since these certificates are not CA signed certificates, you will need to allow your browser to accept them.
 
-Depending on your browser and version you may have an 'advanced' option that allows to accept and continue/proceed.  Some Chrome browser versions will not have this option, but you can bypass this warning by just typing 'thisisunsafe' and it will automatically continue through to the site.
+In the Firefox browser this consists of just clicking through the Advanced button and finding the button to accept and continue. If you are using a Chrome browser, you can bypass this warning by typing 'thisisunsafe', and it will automatically continue through to the site.
 
-Once you bypass the browser warning you should see a login screen where you can use the following credentials to login:
+Once you bypass the browser warning, you should see a login screen where you can use the following credentials to log in:
 
-username: learn@redislabs.com
+username: learn@redislabs.com 
 password: redis123
 
-Once successfully logged in you should see the Redis Enterprise admin UI and be taken to create a database immediately.
+Once successfully logged in, you should see the Redis Enterprise admin console and be taken to create a database immediately.
 
-Leave all the defaults and click 'Next' which will take you to a screen where you can name the database, keep the existing defaults and click 'Activate' to create the database.
+Leave all the defaults and click 'Next', which will take you to a screen where you can name the database, keep the existing defaults and click 'Activate' to create the database.
 
 Now you should be ready for the RBAC exercises.
 
@@ -36,14 +36,14 @@ Now you should be ready for the RBAC exercises.
 Redis Enterprise supports multi-tenancy (a single cluster can host separately managed databases) so a unique port and endpoint are created per database.
 
 1. Find the database in the 'databases' menu and click on it
-2. view the 'Enpoint' ... grab the port value in particular
+2. View the 'Enpoint' ... grab the port value in particular
 3. Connect to redis-cli in the docker container on that port by running:
 
 ```
 docker-compose exec redis_enterprise_rbac redis-cli -p <port-from-endpoint>
 ```
 
-If you are successfully connected you should be able to run the `INFO` command.
+If you are successfully connected; you should be able to run the `INFO` command.
 
 ## Update Default User
 

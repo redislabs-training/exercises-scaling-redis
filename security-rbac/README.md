@@ -1,4 +1,4 @@
-# Exercise: Enabling TLS in Redis Enterpise
+# Exercise: RBAC in Redis Enterpise
 
 ## Requirements
 

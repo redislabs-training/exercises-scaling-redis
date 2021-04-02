@@ -53,13 +53,13 @@ docker-compose exec redis_acls redis-cli
     - can NOT set bucket:3 or any other key  
     Validation should look something like this:
     ```
-    127.0.0.1:6379> auth bucket-reader redis123
+    > auth bucket-reader redis123
     OK
-    127.0.0.1:6379> get bucket:1
+    > get bucket:1
     "dirt"
-    127.0.0.1:6379> get pail:1
+    > get pail:1
     (error) NOPERM this user has no permissions to access one of the keys used as arguments
-    127.0.0.1:6379> set bucket:3 water
+    > set bucket:3 water
     (error) NOPERM this user has no permissions to run the 'set' command or its subcommand
     ```
 

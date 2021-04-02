@@ -36,7 +36,7 @@ Now you should be ready for the RBAC exercises.
 Redis Enterprise supports multi-tenancy (a single cluster can host separately managed databases) so a unique port and endpoint are created per database.
 
 1. Find the database in the 'databases' menu and click on it
-2. View the 'Enpoint' ... grab the port value in particular
+2. View the 'Endpoint' ... grab the port value in particular
 3. Connect to redis-cli in the docker container on that port by running:
 
 ```

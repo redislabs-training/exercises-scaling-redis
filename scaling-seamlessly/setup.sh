@@ -9,12 +9,12 @@ done
 printf ' ready!\n'
 
 printf '\nnode 1: '
-docker exec -it re1 rladmin cluster create name cluster.local username admin@redis.com password redis123
+docker exec -it re1 rladmin cluster create name cluster.local username learn@redislabs.com password redis123
 
 printf '\nnode 2: '
-docker exec -it re2 rladmin cluster join nodes 172.22.0.11 username admin@redis.com password redis123
+docker exec -it re2 rladmin cluster join nodes 172.22.0.11 username learn@redislabs.com password redis123
 
 printf '\nnode 3: '
-docker exec -it re3 rladmin cluster join nodes 172.22.0.11 username admin@redis.com password redis123
+docker exec -it re3 rladmin cluster join nodes 172.22.0.11 username learn@redislabs.com password redis123
 
 printf '\nCluster setup complete!\n'

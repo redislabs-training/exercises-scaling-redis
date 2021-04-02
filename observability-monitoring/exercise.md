@@ -21,7 +21,7 @@ Depending on your browser and version you may have an 'advanced' option that all
 
 Once you bypass the browser warning you should see a login screen where you can use the following credentials to login:
 
-username: learn@redislabs.com  
+username: admin@redis.com  
 password: redis123
 
 Once successfully logged in you should see the Redis Enterprise administration UI.

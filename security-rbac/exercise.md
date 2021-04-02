@@ -22,7 +22,7 @@ In the Firefox browser this consists of just clicking through the Advanced butto
 
 Once you bypass the browser warning, you should see a login screen where you can use the following credentials to log in:
 
-username: learn@redislabs.com 
+username: admin@redis.com   
 password: redis123
 
 Once successfully logged in, you should see the Redis Enterprise admin console and be taken to create a database immediately.

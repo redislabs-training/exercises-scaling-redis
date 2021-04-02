@@ -32,7 +32,7 @@ The next screen will prompt you for cluster authentication by asking you to ente
 
 Now you will need to set admin credentials.  These will be used in subsequent steps.  Here is an example of something that will work:
 
-**Email**: admin@redis.com  
+**Email**: admin@redis.com
 **Password**: redis123  
 
 After credentials have been set you will be taken immediately to a screen to create a database.  We do not need to do that yet. 
@@ -136,13 +136,3 @@ Where were the second database shards placed?
 The cluster manager will place nodes according to available resources and ensure that the primary and secondary replica shards are never on the same node.
 
 This is a simple single primary shard with replica use-case but when we move on to scaling you will see how Redis Enterprise can maintain sharded databases across nodes with replication.
-
-
-
-
-
-
-
-
-
-

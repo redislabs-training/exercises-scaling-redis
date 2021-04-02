@@ -1,5 +1,13 @@
 # Exercise: Redis ACLs
 
+## Connect to Environment
+
+In a terminal run this command to get a shell prompt inside the running docker container:
+
+```
+docker-compose exec redis_acls redis-cli
+```
+
 ## Update the default account
 
 1. Using the `ACL SETUSER` command set the password for the default account to `Sec&789`.

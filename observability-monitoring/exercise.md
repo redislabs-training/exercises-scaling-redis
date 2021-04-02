@@ -104,10 +104,10 @@ Stats can be pulled from different endpoints as well:
 
 Try each of these endpoints.
 
-Also, the id of a specific entity can be passed, for example if we wanted to just get the stats of our database with the id=1 and not the full array of nodes we could run:
+Also, the id of a specific entity can be passed, for example if we wanted to just get the stats of our database with the id=1 and not the full array we could run:
 
 ```
-docker-compose exec redis_enterprise_monitoring curl -k -u learn@redislabs.com:redis123 https://localhost:9443/v1/nodes/bdbs/1
+docker-compose exec redis_enterprise_monitoring curl -k -u learn@redislabs.com:redis123 https://localhost:9443/v1/bdbs/stats/1
 ```
 
 Now do the same thing for the nodes endpoint and just get the stats for node=1.

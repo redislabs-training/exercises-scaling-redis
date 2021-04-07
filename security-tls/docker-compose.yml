@@ -4,3 +4,5 @@ services:
   redis_tls:
     build:
       context: ./
+    ports:
+      - "6379:6379"

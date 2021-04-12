@@ -10,7 +10,7 @@ WORKDIR /
 
 RUN mkdir /usr/local/etc/redis
 
-RUN wget https://raw.githubusercontent.com/redis/redis/6.2/redis.conf -P /usr/local/etc/redis/
+COPY redis.conf /usr/local/etc/redis/
 
 RUN apt-get install -y vim
 

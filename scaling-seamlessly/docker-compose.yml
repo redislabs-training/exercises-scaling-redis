@@ -3,7 +3,7 @@ version: "3"
 services:
   #Node 1
   re1:
-    image: redislabs/redis:6.0.12-58
+    image: redislabs/redis:latest
     container_name: re1
     restart: unless-stopped
     tty: true
@@ -19,7 +19,7 @@ services:
 
   #Node 2
   re2:
-    image: redislabs/redis:6.0.12-58
+    image: redislabs/redis:latest
     container_name: re2
     restart: unless-stopped
     tty: true
@@ -35,7 +35,7 @@ services:
 
   #Node 3
   re3:
-    image: redislabs/redis:6.0.12-58
+    image: redislabs/redis:latest
     container_name: re3
     restart: unless-stopped
     tty: true
